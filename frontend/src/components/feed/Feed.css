@@ -57,22 +57,19 @@ button {
 
 .feed .card {
   border: 1px solid;
-  justify-content: space-between;
+}
+
+.postReactions {
+  display: flex;
+}
+
+.likeCounter {
+  margin-left: 825px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .postReactions button {
   height: 33px;
 }
 
-#feed {
-  flex-direction: row;
-}
-
-#feed .profile-Pic {
-  display: flex;
-}
-
-.timeDateStamp {
-  display: flex;
-  justify-content: end;
-}

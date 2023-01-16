@@ -53,24 +53,26 @@ const Feed = ({ navigate }) => {
               <div className="feed">
                 <Card>
                   <div id='feed' role="feed">
-                    <img className="profile-Pic" src={profile_placeholder} />
-                    <div className="timeDateStamp">
-                      <p>Posted: 1hr ago</p>
+                    <div className="left">
+                      <img className="profile-Pic" src={profile_placeholder} />
                     </div>
                     <Card>
                       <div className="postContent">
                         {posts.map(
                           (post) => ( <Post post={ post } key={ post._id } /> )
                         )}
+                        <div className="timeDateStamp">
+                          <p>Posted: 1hr ago</p>
+                        </div>
                       </div>
                     </Card>
-                    <div className="likeCounter">
-                      <p>Likes: 5</p>
-                    </div>
                   </div>
                   <div className="postReactions">
                     <button className="commentButton">Comment</button>
                     <button className="likeButton">Like</button>
+                    <div className="likeCounter">
+                      <p>Likes: 5</p>
+                    </div>
                   </div>
                 </Card>
               </div>
