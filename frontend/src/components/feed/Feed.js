@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import profile_placeholder from '../profile/profile_placeholder.jpeg';
+import Card from '../Helpers/Card.js';
 import Post from '../post/Post'
+import './Feed.css';
 
 const Feed = ({ navigate }) => {
   const [posts, setPosts] = useState([]);
@@ -30,14 +33,48 @@ const Feed = ({ navigate }) => {
     if(token) {
       return(
         <>
-          <h2>Posts</h2>
-            <button onClick={logout}>
-              Logout
-            </button>
-          <div id='feed' role="feed">
-              {posts.map(
-                (post) => ( <Post post={ post } key={ post._id } /> )
-              )}
+          <div className="createPost">
+            <Card>
+              <div className="statusBox">
+                <img className="profile-Pic" src={profile_placeholder} />
+                <form>
+                  <input className="postInput" type="text" placeholder="What do you want to share?" id="myPost" />
+                  <button className="postButton">Post</button>
+                </form>
+              </div>
+            </Card>
+          </div>
+
+          <div className="personalizedFeed">
+            <Card>
+              <div className="sort">
+                <button className="sortButton">Sort By</button>
+              </div>
+              <div className="feed">
+                <Card>
+                  <div id='feed' role="feed">
+                    <img className="profile-Pic" src={profile_placeholder} />
+                    <div className="timeDateStamp">
+                      <p>Posted: 1hr ago</p>
+                    </div>
+                    <Card>
+                      <div className="postContent">
+                        {posts.map(
+                          (post) => ( <Post post={ post } key={ post._id } /> )
+                        )}
+                      </div>
+                    </Card>
+                    <div className="likeCounter">
+                      <p>Likes: 5</p>
+                    </div>
+                  </div>
+                  <div className="postReactions">
+                    <button className="commentButton">Comment</button>
+                    <button className="likeButton">Like</button>
+                  </div>
+                </Card>
+              </div>
+            </Card>
           </div>
         </>
       )

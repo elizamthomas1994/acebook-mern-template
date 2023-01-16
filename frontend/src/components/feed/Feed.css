@@ -1,0 +1,78 @@
+.createPost {
+  width: 1150px;
+}
+
+.createPost .card {
+  border: solid 0.1px lightgray;
+}
+
+.profile-Pic {
+  width: 75px;
+  height: 75px;
+}
+
+.statusBox {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.postInput {
+  background-color: #f1f2f5;
+  width: 850px;
+  border-radius: 10px;
+  height: 35px;
+  margin: 0px 20px;
+  border: solid 0.1px lightgray;
+}
+
+.postInput:hover {
+  background-color: #e5e6eb;
+}
+
+button {
+  color: #fff;
+  background-color: #4267b2;
+  border-radius: 10px;
+  height: 38px;
+  width: 75px;
+  font-weight: bold;
+  border: solid 0.1px lightgray;
+}
+
+.postButton:hover {
+  background-color: #fff;
+  color: #4267b2;
+}
+
+.personalizedFeed .card {
+  border: none;
+}
+
+.sort {
+  display: flex;
+  justify-content: end;
+}
+
+.feed .card {
+  border: 1px solid;
+  justify-content: space-between;
+}
+
+.postReactions button {
+  height: 33px;
+}
+
+#feed {
+  flex-direction: row;
+}
+
+#feed .profile-Pic {
+  display: flex;
+}
+
+.timeDateStamp {
+  display: flex;
+  justify-content: end;
+}
