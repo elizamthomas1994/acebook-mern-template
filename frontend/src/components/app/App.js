@@ -12,16 +12,11 @@ import {
 
 const App = () => {
     return (
-      <div className='app'>
-        <Navbar />
-        <div className='pages'>
-          <Routes>
-            <Route path='/posts'  element={<Feed navigate={ useNavigate() }/>}/>
-            <Route path='/login'  element={<LoginForm  navigate={ useNavigate() }/>}/>
-            <Route path='/signup' element={<SignUpForm navigate={ useNavigate() }/>}/>
-          </Routes>
-        </div>
-        </div>
+      <Routes>
+        <Route path='/posts'  element={<Feed navigate={ useNavigate() }/>}/>
+        <Route path='/login'  element={<LoginForm  navigate={ useNavigate() }/>}/>
+        <Route path='/signup' element={<SignUpForm navigate={ useNavigate() }/>}/>
+      </Routes>
     );
 }
 
