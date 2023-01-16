@@ -6,7 +6,6 @@ import Navbar from '../navbar/Navbar'
 import Feed from '../feed/Feed'
 import {
   useNavigate,
-  BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
