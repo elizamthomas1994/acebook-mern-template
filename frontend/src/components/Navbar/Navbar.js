@@ -1,17 +1,15 @@
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 
-const user_id = window.localStorage.getItem('user_id');
-
-const nav = ({ navigate }) => {
+const Navbar = (navigate) => {
   const logout = () => {
     window.localStorage.removeItem('token');
     window.localStorage.removeItem('user_id');
-    navigate('/login');
+    // navigate('/login');
   };
-};
 
-const Navbar = () => {
+  const user_id = window.localStorage.getItem('user_id');
+
   return (
     <header>
       <div className="container">
@@ -26,7 +24,7 @@ const Navbar = () => {
             <button id="profile-page">My Profile</button>
           </Link>
           <Link to="/login">
-            <button className="logout" onClick={nav}>
+            <button className="logout" onClick={logout}>
               Logout
             </button>
           </Link>
