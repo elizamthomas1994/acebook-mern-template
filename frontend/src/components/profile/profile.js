@@ -4,8 +4,11 @@ import Card from '../Helpers/Card.js';
 import './profile.css';
 import Feed from '../feed/Feed'
 import { useParams } from 'react-router-dom';
+import coverPhoto from './cover-photo.jpg';
+import '../../index.css';
 
 const Profile = () => {
+
   const { id } = useParams();
   const [token, setToken] = useState(window.localStorage.getItem('token'));
   const [user, setUser] = useState([]);
@@ -33,7 +36,9 @@ const Profile = () => {
     // eslint-disable-next-line
   }, []);
 
+
   const profileMatch = user._id === userId;
+
 
   const handleAddFriend = () => {
     // Pushes Eliza into Bill's friends list:
@@ -56,12 +61,15 @@ const Profile = () => {
 
 return(
   <div>
-    <div className='coverPhoto'>
-      <Card>
-      </Card>
+    <div className='profile-header'>
+      <div className='coverPhoto'>
+      </div>
+      <div>
 
+      </div>
     </div>
-    <div className='container'>
+
+    <div className='profile'>
       <div className='left'>
         <div className='user-info'>
           <Card>
@@ -72,14 +80,27 @@ return(
               <p>{user.profession}</p>
               <p>{user.relationship_status}</p>
             </div>
-          </Card>
+
+            <div>
+              {profileMatch ? (
+              <div className='edit-button'>
+                <button>Edit profile</button>
+              </div>
+              ) : (
+              <div className='friend-button'>
+                <button onClick={ handleAddFriend }>Add Friend</button>
+              </div>
+              )}
+            </div>
+            </Card>
         </div>
 
         <div className='intro'>
-          <Card>
+          <Card> 
             <h3>Intro</h3>
             <p>{user.bio}</p>
-          </Card>
+          </Card>   
+   
         </div>
 
         <div className='photos'>
@@ -108,26 +129,12 @@ return(
         </div>
       </div>
 
-      
-      <div className='right'>
-        {profileMatch ? (
-          <div className='edit-button'>
-            <button>Edit profile</button>
-          </div>
-         ) : (
-          <div className='friend-button'>
-            <button onClick={ handleAddFriend }>Add Friend</button>
-          </div>
-        )}
+                
+      <div className='posts right'>
+        <Feed />
       </div>
-        
-        <div className='posts'>
-          <Card>
-            <Feed />
-          </Card>
-        </div>
-      </div>  
-    </div>
+    </div>  
+  </div>
  )
 }
 

@@ -1,0 +1,19 @@
+h2 {
+  font-size: 16px;
+  margin: 20px 0px;
+  color: rgb(95, 94, 94);
+  margin-left: 10px;
+}
+
+
+.menu-item img {
+  height: 20px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+ 
+  
+  width: 200px;
+}
