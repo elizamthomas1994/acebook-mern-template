@@ -29,13 +29,13 @@ const Feed = ({ navigate }) => {
     // eslint-disable-next-line
   }, [postAdded]);
 
-  if (token && window.location.pathname === `/users/${userId}`) {
+  if (token && (window.location.href).includes('/users')) {
     return (
       <div className="feed">
 
           <div id="feed" role="feed">
             {posts
-              .filter((post) => post.user_id._id === userId)
+              .filter((post) => post.user_id._id === (window.location.pathname).replace('/users/', ''))
               .map((post) => (
                 <Post post={post} key={post._id} setPostAdded={setPostAdded} />
               ))}
