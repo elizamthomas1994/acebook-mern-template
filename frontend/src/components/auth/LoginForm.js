@@ -26,10 +26,12 @@ const LogInForm = ({ navigate }) => {
     } else {
       console.log('oop');
       let data = await response.json();
-      console.log(data);
+      // window.localStorage.setItem('user_age', data.age);
       window.localStorage.setItem('token', data.token);
       window.localStorage.setItem('user_id', data.user_id);
-      console.log(window.localStorage.getItem('user_id'));
+      window.localStorage.setItem('user_name', data.username);
+      const friends = data.friends.join(',')
+      window.localStorage.setItem('friends_list', friends);
       navigate('/posts');
     }
   };

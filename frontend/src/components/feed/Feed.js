@@ -23,7 +23,7 @@ const Feed = ({ navigate }) => {
           setToken(window.localStorage.getItem('token'));
           setPosts(data.posts.reverse());
           setPostAdded(false);
-          console.log(data.posts);
+          // console.log(data.posts);
         });
     }
     // eslint-disable-next-line
