@@ -39,3 +39,4 @@ const Navbar = (navigate) => {
 };
 
 export default Navbar;
+

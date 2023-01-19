@@ -13,6 +13,9 @@ const Profile = () => {
   const [token, setToken] = useState(window.localStorage.getItem('token'));
   const [user, setUser] = useState([]);
   const userId = window.localStorage.getItem('user_id');
+  const userName = window.localStorage.getItem('user_name');
+  const friendsList = window.localStorage.getItem('friends_list');
+  const age = window.localStorage.getItem('age');
 
   useEffect(() => {
     if (token) {
@@ -26,14 +29,35 @@ const Profile = () => {
           window.localStorage.setItem('token', data.token);
           setToken(window.localStorage.getItem('token'));
           setUser(data.user);
-          console.log(data.user.name);
-          console.log(data.user.age)
+          // console.log(data.user.name);
+          // console.log(data.user.age)
         });
     }
     // eslint-disable-next-line
   }, []);
-  console.log(user);
-  const profileMatch = user._id === (window.location.pathname).replace('/users/', '');
+
+
+  const profileMatch = user._id === userId;
+
+
+  const handleAddFriend = () => {
+    // Pushes Eliza into Bill's friends list:
+    user.friends.push(userName);
+    // Pushed Bill into Eliza's friends list:
+    const friendsArray = friendsList.split(',');
+    friendsArray.push(user.name);
+    console.log(friendsArray);
+    console.log(user.friends);
+
+    // fetch('/users/' + id, {
+    //   method: 'PATCH',
+    //   headers: {
+    //     Authorization: `Bearer ${token}`,
+    //     'Content-type': 'application/json',
+    //   },
+    //   body: JSON.stringify({ post_id: post._id, user_id: userId }),
+    // }).then(() => setPostAdded(true));
+  }
 
 return(
   <div>
@@ -64,7 +88,7 @@ return(
               </div>
               ) : (
               <div className='friend-button'>
-                <button>Add Friend</button>
+                <button onClick={ handleAddFriend }>Add Friend</button>
               </div>
               )}
             </div>
@@ -104,6 +128,7 @@ return(
           </Card>
         </div>
       </div>
+
                 
       <div className='posts right'>
         <Feed />
