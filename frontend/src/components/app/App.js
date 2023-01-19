@@ -12,7 +12,9 @@ import { useNavigate, Routes, Route, Navigate } from 'react-router-dom';
 const App = ({ navigate }) => {
   return (
     <div>
-      <Navbar navigate={useNavigate()} />
+      {!(window.location.pathname).includes('signup') &&
+        !(window.location.pathname).includes('login') &&
+        <Navbar /> }
       <div>
         <Routes>
           <Route path="/posts" element={<Feed navigate={useNavigate()} />} />

@@ -33,7 +33,7 @@ const Profile = () => {
     // eslint-disable-next-line
   }, []);
   console.log(user);
-  const profileMatch = user._id === userId;
+  const profileMatch = user._id === (window.location.pathname).replace('/users/', '');
 
 return(
   <div>
