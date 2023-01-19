@@ -3,6 +3,8 @@ import Post from '../post/Post';
 import Create from '../createPost/CreatePost';
 import Card from '../Helpers/Card';
 import './Feed.css';
+import '../../index.css';
+import Menu from '../menu/menu'
 
 const Feed = ({ navigate }) => {
   const [posts, setPosts] = useState([]);
@@ -31,23 +33,27 @@ const Feed = ({ navigate }) => {
 
   if (token && (window.location.href).includes('/users')) {
     return (
-      <div className="feed">
-
-          <div id="feed" role="feed">
+     
+      <div className="feed-page">
+          <Menu />
+          <div className="feed-scroll" role="feed">
             {posts
               .filter((post) => post.user_id._id === (window.location.pathname).replace('/users/', ''))
               .map((post) => (
                 <Post post={post} key={post._id} setPostAdded={setPostAdded} />
               ))}
           </div>
-        
-      </div>
+        </div>
     );
   } else if (token) {
     return (
-      <div className="feed">
-        <Create setPostAdded={setPostAdded} />
-          <div id="feed" role="feed">
+    
+     
+      <div className="feed-page">
+      <Menu />
+        
+          <div className="feed-scroll" role="feed">
+          <Create setPostAdded={setPostAdded} />
             {posts.map((post) => (
               <Post post={post} key={post._id} setPostAdded={setPostAdded} />
             ))}
