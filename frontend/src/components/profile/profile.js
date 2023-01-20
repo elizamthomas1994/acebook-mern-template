@@ -29,6 +29,7 @@ const Profile = () => {
           window.localStorage.setItem('token', data.token);
           setToken(window.localStorage.getItem('token'));
           setUser(data.user);
+      
           // console.log(data.user.name);
           // console.log(data.user.age)
         });
@@ -59,6 +60,7 @@ const Profile = () => {
     // }).then(() => setPostAdded(true));
   }
 
+if (token) {
 return(
   <div >
     <div className="profile-container">
@@ -134,6 +136,13 @@ return(
     </div>  
   </div>
  )
+} else {
+  return (
+    <div>
+    <h1>hello</h1>
+    </div>
+  )
+}
 }
 
 export default Profile
