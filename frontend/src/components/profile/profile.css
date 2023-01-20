@@ -1,3 +1,9 @@
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+}
+
 .profile-header {
   background-color: white;
   width: 100vw;
@@ -50,4 +56,31 @@
 
 .profile-pic-container {
   display: flex;
+
+.redirect-login {
+  height: 100px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+}
+
+.redirect-login-card {
+  width: 30vw;
+
+}
+
+
+.redirect-login h2 {
+  margin: 0px;
+}
+
+.redirect-login Link {
+  margin: 0px;
+}
+
+.redirect-login button {
+
+  height: 30px;
+  margin: auto;
 }

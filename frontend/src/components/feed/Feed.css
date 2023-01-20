@@ -1,12 +1,3 @@
-.feed-page {
-  display: flex;
-  /* flex-direction: column; */
-}
-
-.feed, h2 {
-  margin: 0px;
-}
-
 .feed-scroll {
   display: flex;
   flex-direction: column;

@@ -1,0 +1,44 @@
+.feed-page {
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.feed, h2 {
+  margin: 0px;
+}
+
+.feed-scroll {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  align-items: center;
+  margin: 0px;
+}
+
+.redirect-login {
+  height: 100px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+}
+
+.redirect-login-card {
+  width: 30vw;
+
+}
+
+
+.redirect-login h2 {
+  margin: 0px;
+}
+
+.redirect-login Link {
+  margin: 0px;
+}
+
+.redirect-login button {
+
+  height: 30px;
+  margin: auto;
+}

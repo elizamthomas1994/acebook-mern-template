@@ -28,6 +28,7 @@ const Profile = () => {
           window.localStorage.setItem('token', data.token);
           setToken(window.localStorage.getItem('token'));
           setUser(data.user);
+      
           // console.log(data.user.name);
           // console.log(data.user.age)
         });
@@ -55,6 +56,7 @@ const Profile = () => {
     //   body: JSON.stringify({ post_id: post._id, user_id: userId }),
     // }).then(() => setPostAdded(true));
   };
+
 
   return (
     <div>
@@ -95,6 +97,7 @@ const Profile = () => {
               </div>
             </Card>
           </div>
+
 
           <div className="intro">
             <Card>
@@ -148,5 +151,5 @@ const Profile = () => {
     </div>
   );
 };
-
 export default Profile;
+
