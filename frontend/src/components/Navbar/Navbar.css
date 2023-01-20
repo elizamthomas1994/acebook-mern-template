@@ -1,7 +1,7 @@
 header {
   background: #1877f2;
 }
-header .container {
+header .navbar {
   max-width: 1400px;
   margin: 0 auto;
   padding: 10px 20px;
@@ -10,9 +10,15 @@ header .container {
   justify-content: right;
 }
 
-header .container .links {
+header .navbar .links {
   background-color: #1877f2;
   min-width: 350px;
   display: flex;
   justify-content: space-between;
+}
+
+.navbar button {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
 }
