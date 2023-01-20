@@ -1,3 +1,4 @@
+
 .profile-container {
   display: flex;
   justify-content: center;
@@ -18,7 +19,7 @@
   background-repeat: no-repeat;
   background-position: bottom;
   width: 80vw;
-  border-radius: 0px 0px 10px 10px;  
+  border-radius: 0px 0px 10px 10px;
 }
 
 .profile {
@@ -26,7 +27,6 @@
   width: 60%;
 
   margin: 0px 300px;
-
 }
 
 .profile .card {
@@ -39,20 +39,23 @@
 
 .left {
   width: 300px;
-  
 }
 
 .photos .card {
   display: flex;
   flex-wrap: wrap;
- 
-
 }
 
 .photo .card {
   width: 60px;
 }
 
+.profile-pic {
+  width: 200px;
+}
+
+.profile-pic-container {
+  display: flex;
 
 .redirect-login {
   height: 100px;

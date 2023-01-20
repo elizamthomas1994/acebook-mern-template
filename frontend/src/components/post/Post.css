@@ -1,6 +1,5 @@
 .post {
   width: 500px;
-
 }
 
 .header {
@@ -17,12 +16,11 @@
   align-items: center;
 }
 
-
 .edit-buttons button {
   color: gray;
 }
 
-article { 
+article {
   position: relative;
   width: 400px;
   justify-content: space-between;
@@ -34,12 +32,6 @@ article {
   height: auto;
   overflow-wrap: break-word;
 }
-
-
-
-
-
-
 
 .input {
   display: flex;
@@ -54,7 +46,6 @@ span {
 hr {
   border-top: 1px solid lightgray;
   margin-top: 10px;
-
 }
 
 .bottom-buttons {
@@ -66,4 +57,16 @@ hr {
   margin: 0px 10px;
   background-color: none;
   color: gray;
+}
+
+.post-avatar {
+  width: 40px;
+  /* padding: 1px; */
+}
+
+.post-avatar-container {
+  /* border: lightgray;
+  border-style: solid; */
+  /* padding: 10px; */
+  margin: 10px;
 }
