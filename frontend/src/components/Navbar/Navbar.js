@@ -12,7 +12,7 @@ const Navbar = (navigate) => {
 
   return (
     <header>
-      <div className="container">
+      <div className="navbar">
         <div className="links">
           <Link to="/posts">
             <button id="homebutton">Acebook</button>

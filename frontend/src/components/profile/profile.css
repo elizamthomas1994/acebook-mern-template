@@ -1,4 +1,7 @@
-
+.profile-container {
+  display: flex;
+  justify-content: center;
+}
 
 .profile-header {
   background-color: white;

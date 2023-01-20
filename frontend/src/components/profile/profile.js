@@ -60,16 +60,14 @@ const Profile = () => {
   }
 
 return(
-  <div>
-    <div className='profile-header'>
-      <div className='coverPhoto'>
+  <div >
+    <div className="profile-container">
+    <div className='coverPhoto'>
       </div>
-      <div>
-
       </div>
-    </div>
 
     <div className='profile'>
+  
       <div className='left'>
         <div className='user-info'>
           <Card>
