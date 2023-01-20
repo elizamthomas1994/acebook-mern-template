@@ -7,6 +7,7 @@ import '../../index.css';
 import Menu from '../menu/menu'
 import Feed from './Feed';
 import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const FeedPage = ({ navigate }) => {
   const [posts, setPosts] = useState([]);
@@ -43,7 +44,22 @@ const FeedPage = ({ navigate }) => {
         </div>
     );
   } else {
-        navigate('/login');
+    return (
+
+    <div className="redirect-login">
+      <div className="redirect-login-card">
+      <Card>
+        <h2>You are not logged in, please click here to log in</h2>
+        <Link to="/login">
+          <button className="redirect to login" >
+            Login
+          </button>
+        </Link>
+       
+      </Card> 
+      </div>
+  </div>
+    )
   }
   } 
 
